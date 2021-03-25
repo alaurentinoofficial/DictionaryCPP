@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-#define MAX_DICT_SIZE 100
+#define MAX_DICT_SIZE 50
 
 template <typename T, typename J>
 struct Node
@@ -32,6 +32,7 @@ public:
         Node<const char*, V>* node = this->hash[pos];
         Node<const char*, V>* newNode = new Node<const char*, V>{ key, value };
 
+        // Append at first position [First-In-Last-Out]
         newNode->next = this->hash[pos];
         this->hash[pos] = newNode;
     }
@@ -83,6 +84,15 @@ public:
         }
     }
 
+    void clear()
+    {
+        // Dealocate from memory
+        delete hash;
+
+        // Realocate in memory
+        hash = new Node<const char*, V>*[MAX_DICT_SIZE] {};
+    }
+
     static int hashFunction(const char* key, unsigned long seed = 4242)
     {
         unsigned long hash = seed;
@@ -95,7 +105,6 @@ public:
             hash = ((hash << 5) / 3) + hash + c;
         }
 
-        return 42;
         // Limit the value from 0 to above of array size
         return hash % MAX_DICT_SIZE;
     }

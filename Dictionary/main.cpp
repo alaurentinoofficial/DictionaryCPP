@@ -12,7 +12,7 @@ void call2()
 
 int main()
 {
-	std::cout << "Simple Dictionary in C++" << std::endl << std::endl;
+	std::cout << "Dictionary in C++" << std::endl << std::endl;
 
 
 	//========================================
@@ -20,31 +20,66 @@ int main()
 	//========================================
 	Dictionary<char*> dict;
 
-	dict.add("Ola", "mundo");
-	dict.add("Hello", "world");
-	dict.add("Hola", "mundo!");
+	dict.add("PT", "Ola mundo!");
+	dict.add("EN", "Hello world!");
+	dict.add("ES", "Holla mundo!");
 
-	dict.pop("Hello");
-
-	char* r1 = dict.get("Ola");
+	char* r1 = dict.get("PT");
 	r1 = ((bool)(r1 != NULL) ? r1 : "Null");
 
-	char* r2 = dict.get("Hello");
+	char* r2 = dict.get("EN");
 	r2 = ((bool)(r2 != NULL) ? r2 : "Null");
 
-	char* r3 = dict.get("Hola");
+	char* r3 = dict.get("ES");
 	r3 = ((bool)(r3 != NULL) ? r3 : "Null");
 
-	std::cout << "Ola: " << r1 << std::endl;
-	std::cout << "Hello: " << r2 << std::endl;
-	std::cout << "Hola: " << r3 << std::endl;
-
-	std::cout << std::endl << std::endl;
-
+	std::cout << "PT: " << r1 << std::endl;
+	std::cout << "EN: " << r2 << std::endl;
+	std::cout << "ES: " << r3 << std::endl;
 
 	//========================================
-	//   Second exemple calling functions
+	//    Second exemple remove a sample
 	//========================================
+	dict.pop("EN");
+	std::cout << std::endl << "After delete \"EN\" pair:" << std::endl;
+
+	r1 = dict.get("PT");
+	r1 = ((bool)(r1 != NULL) ? r1 : "Null");
+
+	r2 = dict.get("EN");
+	r2 = ((bool)(r2 != NULL) ? r2 : "Null");
+
+	r3 = dict.get("ES");
+	r3 = ((bool)(r3 != NULL) ? r3 : "Null");
+
+	std::cout << "PT: " << r1 << std::endl;
+	std::cout << "EN: " << r2 << std::endl;
+	std::cout << "ES: " << r3 << std::endl;
+
+	//========================================
+	//    Third exemple clearing the dict
+	//========================================
+	dict.clear();
+	std::cout << std::endl << "After realocate the dictionary in memory:" << std::endl;
+
+	r1 = dict.get("PT");
+	r1 = ((bool)(r1 != NULL) ? r1 : "Null");
+
+	r2 = dict.get("EN");
+	r2 = ((bool)(r2 != NULL) ? r2 : "Null");
+
+	r3 = dict.get("ES");
+	r3 = ((bool)(r3 != NULL) ? r3 : "Null");
+
+	std::cout << "PT: " << r1 << std::endl;
+	std::cout << "EN: " << r2 << std::endl;
+	std::cout << "ES: " << r3 << std::endl;
+
+	//========================================
+	//    Forth exemple calling functions
+	//========================================
+	std::cout << std::endl << "New dict calling functions:" << std::endl;
+
 	Dictionary<void(*)()> dict2;
 
 	dict2.add("call1", call1);
