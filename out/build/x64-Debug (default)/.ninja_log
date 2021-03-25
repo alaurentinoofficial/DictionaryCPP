@@ -1,0 +1,18 @@
+# ninja log v5
+1	432	638389463	Dictionary/CMakeFiles/Dictionary.dir/Dictionary.cpp.obj	34d901b5f2634388
+295	464	638389988	Dictionary/Dictionary.exe	c1892322abd09bb0
+0	294	638389988	Dictionary/CMakeFiles/Dictionary.dir/main.cpp.obj	fc46da5032e34264
+6	353	638390052	Dictionary/CMakeFiles/Dictionary.dir/main.cpp.obj	fc46da5032e34264
+0	279	638390164	Dictionary/CMakeFiles/Dictionary.dir/Dictionary.cpp.obj	34d901b5f2634388
+0	296	638390253	Dictionary/CMakeFiles/Dictionary.dir/main.cpp.obj	fc46da5032e34264
+296	433	638390254	Dictionary/Dictionary.exe	b3ff09393777f264
+1	292	638390424	Dictionary/CMakeFiles/Dictionary.dir/Dictionary.cpp.obj	34d901b5f2634388
+7	294	638390424	Dictionary/CMakeFiles/Dictionary.dir/main.cpp.obj	fc46da5032e34264
+0	288	638390488	Dictionary/CMakeFiles/Dictionary.dir/Dictionary.cpp.obj	34d901b5f2634388
+6	285	638390513	Dictionary/CMakeFiles/Dictionary.dir/Dictionary.cpp.obj	34d901b5f2634388
+6	287	638390527	Dictionary/CMakeFiles/Dictionary.dir/Dictionary.cpp.obj	34d901b5f2634388
+0	292	638390527	Dictionary/CMakeFiles/Dictionary.dir/main.cpp.obj	fc46da5032e34264
+292	425	638390527	Dictionary/Dictionary.exe	b3ff09393777f264
+0	306	638390534	Dictionary/CMakeFiles/Dictionary.dir/main.cpp.obj	fc46da5032e34264
+0	287	638390554	Dictionary/CMakeFiles/Dictionary.dir/main.cpp.obj	fc46da5032e34264
+287	419	638390554	Dictionary/Dictionary.exe	c1892322abd09bb0
