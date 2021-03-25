@@ -32,25 +32,8 @@ public:
         Node<const char*, V>* node = this->hash[pos];
         Node<const char*, V>* newNode = new Node<const char*, V>{ key, value };
 
-        // Case is the first element
-        if (node == NULL)
-            this->hash[pos] = newNode; // Append itself as first element
-        
-        // Case exists colision
-        else
-        {
-            // Pass by all the elements in linked list
-            while (node)
-            {
-                if (node->next == NULL) // Compare if the next node is empty
-                {
-                    node->next = newNode; // Append itself in linked list
-                    break;
-                }
-
-                node = node->next; // Call the next node
-            }
-        }
+        newNode->next = this->hash[pos];
+        this->hash[pos] = newNode;
     }
 
     V get(const char* key)
@@ -112,6 +95,7 @@ public:
             hash = ((hash << 5) / 3) + hash + c;
         }
 
+        return 42;
         // Limit the value from 0 to above of array size
         return hash % MAX_DICT_SIZE;
     }
