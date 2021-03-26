@@ -60,7 +60,7 @@ public:
         }
     }
 
-    V get(const char* key)
+    V& get(const char* key)
     {
         // Discovery the hash number
         int pos = Dictionary::hashFunction(key);
@@ -79,7 +79,8 @@ public:
         return *(new V());
     }
 
-    V operator[](const char* key) {
+    V& operator[](const char* key)
+    {
         return this->get(key);
     }
 

@@ -38,7 +38,27 @@ int main()
 	std::cout << "ES: " << r3 << std::endl;
 
 	//========================================
-	//    Second exemple remove a sample
+	//  Second exemple change value using []
+	//========================================
+	dict["EN"] = "Has a new value here";
+	std::cout << std::endl << "After change the value of \"EN\" using [] operator:" << std::endl;
+
+	r1 = dict["PT"];
+	r1 = ((bool)(r1 != NULL) ? r1 : "Null");
+
+	r2 = dict["EN"];
+	r2 = ((bool)(r2 != NULL) ? r2 : "Null");
+
+	r3 = dict["ES"];
+	r3 = ((bool)(r3 != NULL) ? r3 : "Null");
+
+	std::cout << "PT: " << r1 << std::endl;
+	std::cout << "EN: " << r2 << std::endl;
+	std::cout << "ES: " << r3 << std::endl;
+
+
+	//========================================
+	//     Third exemple remove a sample
 	//========================================
 	dict.pop("EN");
 	std::cout << std::endl << "After delete \"EN\" pair:" << std::endl;
@@ -57,7 +77,7 @@ int main()
 	std::cout << "ES: " << r3 << std::endl;
 
 	//========================================
-	//    Third exemple clearing the dict
+	//    Fourth exemple clearing the dict
 	//========================================
 	dict.clear();
 	std::cout << std::endl << "After realocate the dictionary in memory:" << std::endl;
@@ -76,7 +96,7 @@ int main()
 	std::cout << "ES: " << r3 << std::endl;
 
 	//========================================
-	//    Forth exemple calling functions
+	//    Fifth exemple calling functions
 	//========================================
 	std::cout << std::endl << "New dict calling functions:" << std::endl;
 
