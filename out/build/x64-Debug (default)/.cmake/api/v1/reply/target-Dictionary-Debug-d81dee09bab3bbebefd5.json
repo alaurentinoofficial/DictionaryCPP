@@ -102,7 +102,7 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Dictionary/Dictionary.h",
+			"path" : "Dictionary/Dictionary.hpp",
 			"sourceGroupIndex" : 1
 		}
 	],
