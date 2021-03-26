@@ -20,17 +20,17 @@ int main()
 	//========================================
 	Dictionary<char*> dict;
 
-	dict.add("PT", "Ola mundo!");
-	dict.add("EN", "Hello world!");
-	dict.add("ES", "Holla mundo!");
+	dict.set("PT", "Ola mundo!");
+	dict.set("EN", "Hello world!");
+	dict.set("ES", "Holla mundo!");
 
-	char* r1 = dict.get("PT");
+	char* r1 = dict["PT"];
 	r1 = ((bool)(r1 != NULL) ? r1 : "Null");
 
-	char* r2 = dict.get("EN");
+	char* r2 = dict["EN"];
 	r2 = ((bool)(r2 != NULL) ? r2 : "Null");
 
-	char* r3 = dict.get("ES");
+	char* r3 = dict["ES"];
 	r3 = ((bool)(r3 != NULL) ? r3 : "Null");
 
 	std::cout << "PT: " << r1 << std::endl;
@@ -43,13 +43,13 @@ int main()
 	dict.pop("EN");
 	std::cout << std::endl << "After delete \"EN\" pair:" << std::endl;
 
-	r1 = dict.get("PT");
+	r1 = dict["PT"];
 	r1 = ((bool)(r1 != NULL) ? r1 : "Null");
 
-	r2 = dict.get("EN");
+	r2 = dict["EN"];
 	r2 = ((bool)(r2 != NULL) ? r2 : "Null");
 
-	r3 = dict.get("ES");
+	r3 = dict["ES"];
 	r3 = ((bool)(r3 != NULL) ? r3 : "Null");
 
 	std::cout << "PT: " << r1 << std::endl;
@@ -62,13 +62,13 @@ int main()
 	dict.clear();
 	std::cout << std::endl << "After realocate the dictionary in memory:" << std::endl;
 
-	r1 = dict.get("PT");
+	r1 = dict["PT"];
 	r1 = ((bool)(r1 != NULL) ? r1 : "Null");
 
-	r2 = dict.get("EN");
+	r2 = dict["EN"];
 	r2 = ((bool)(r2 != NULL) ? r2 : "Null");
 
-	r3 = dict.get("ES");
+	r3 = dict["ES"];
 	r3 = ((bool)(r3 != NULL) ? r3 : "Null");
 
 	std::cout << "PT: " << r1 << std::endl;
@@ -82,11 +82,11 @@ int main()
 
 	Dictionary<void(*)()> dict2;
 
-	dict2.add("call1", call1);
-	dict2.add("call2", call2);
+	dict2.set("call1", call1);
+	dict2.set("call2", call2);
 
-	dict2.get("call1")();
-	dict2.get("call2")();
+	dict2["call1"]();
+	dict2["call2"]();
 
 	return 0;
 }
